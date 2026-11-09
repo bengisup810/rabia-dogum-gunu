@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>İyi ki Doğdun Rabia 💗</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8c8dc, #d9c2f0, #fce4ec);
+    font-family: Georgia, serif;
+    color: #603d59;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* UÇUŞAN KALPLER */
+
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-hearts span {
+    position: absolute;
+    bottom: -50px;
+    animation: floatUp 10s linear infinite;
+    opacity: 0;
+    font-size: 25px;
+}
+
+.floating-hearts span:nth-child(1) {
+    left: 10%;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ANA EKRAN */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 50px 25px;
+    background: rgba(255,255,255,0.72);
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(100,50,100,0.15);
+    backdrop-filter: blur(8px);
+}
+
+.main-heart {
+    font-size: 65px;
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+h1 {
+    font-size: clamp(30px, 7vw, 45px);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    background: #d982ad;
+    color: white;
+    padding: 15px 30px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #bd6593;
+    transform: scale(1.05);
+}
+
+#surprise {
+    display: none;
+    margin-top: 25px;
+    font-size: 19px;
+    line-height: 1.8;
+    animation: appear 0.8s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FOTOĞRAF GALERİSİ */
+
+.gallery {
+    position: relative;
+    z-index: 1;
+    padding: 65px 20px 90px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.gallery h2 {
+    font-size: clamp(25px, 5vw, 35px);
+    margin-bottom: 15px;
+}
+
+.gallery-intro {
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.photo {
+    width: 190px;
+    padding: 12px 12px 20px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(80,40,80,0.2);
+    transition: 0.3s;
+}
+
+.photo:nth-child(odd) {
+    transform: rotate(-3deg);
+}
+
+.photo:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.photo:hover {
+    transform: rotate(0deg) scale(1.06);
+}
+
+.photo img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo p {
+    font-size: 14px;
+    margin: 14px 0 0;
+    line-height: 1.5;
+}
+
+/* ALT MESAJ */
+
+.footer {
+    position: relative;
+    z-index: 1;
+    padding: 30px 20px 60px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+@media (max-width: 500px) {
+    .photo {
+        width: 155px;
+    }
+
+    .photo img {
+        height: 145px;
+    }
+
+    .photos {
+        gap: 18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- UÇUŞAN KALPLER -->
+
+<div class="floating-hearts">
+    <span>💗</span>
+    <span>💕</span>
+    <span>💖</span>
+    <span>💗</span>
+    <span>❤️</span>
+</div>
+
+<!-- KARŞILAMA EKRANI -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="main-heart">💗</div>
+
+        <h1>İyi ki Doğdun Rabia!</h1>
+
+        <p>
+            Bugün sıradan bir gün değil.
+            Çünkü bugün senin günün.
+            <br>
+            Senin için küçük ama sevgi dolu
+            bir sürpriz hazırladım...
+        </p>
+
+        <button onclick="showSurprise()">
+            Sürprizine Tıkla ✨
+        </button>
+
+        <div id="surprise">
+            🎂 Nice güzel yaşlara Rabia!
+            <br>
+            Hayatın hep mutluluklarla dolsun.
+            <br>
+            İyi ki varsın! 💕
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOTOĞRAF GALERİSİ -->
+
+<section class="gallery">
+
+    <h2>Biriktirdiğimiz Güzel Anılar 💗</h2>
+
+    <p class="gallery-intro">
+        Her fotoğrafın ayrı bir hikâyesi var...
+    </p>
+
+    <div class="photos">
+
+        <div class="photo">
+            <img src="fotograflar/foto1.jpg" alt="Birlikte bir anı">
+            <p>En güzel anılarımızdan biri 💕</p>
+        </div>
+
+        <div class="photo">
+            <img src="fotograflar/foto2.jpg" alt="Birlikte bir anı">
+            <p>İyi ki o gün beraberdik ✨</p>
+        </div>
+
+        <div class="photo">
+            <img src="fotograflar/foto3.jpg" alt="Birlikte bir anı">
+            <p>Unutulmayacak bir gün 🥹</p>
+        </div>
+
+        <div class="photo">
+            <img src="fotograflar/foto4.jpg" alt="Birlikte bir anı">
+            <p>Birlikte daha nice anılara 💗</p>
+        </div>
+
+        <div class="photo">
+            <img src="fotograflar/foto5.jpg" alt="Birlikte bir anı">
+            <p>Favori insanımla favori anım 🎀</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SON MESAJ -->
+
+<footer class="footer">
+    <p>
+        Bazı insanlar hayatımıza güzellik katar.
+        <br>
+        İyi ki onlardan birisin Rabia. 💗
+    </p>
+    <p>Sevgiyle hazırlandı... 🎀</p>
+</footer>
+
+<script>
+function showSurprise() {
+    document.getElementById("surprise").style.display = "block";
+}
+</script>
+
+</body>
+</html>
